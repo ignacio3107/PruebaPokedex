@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="Y6W-OH-hqX" customClass="DetailVC" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGDetail" translatesAutoresizingMaskIntoConstraints="NO" id="5cO-n0-TW6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pO-6u-mgi" userLabel="ViewP">
+                                <rect key="frame" x="118" y="138" width="157" height="157.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPok" translatesAutoresizingMaskIntoConstraints="NO" id="Ngz-mD-mq7">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="157.33333333333334"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ngz-mD-mq7" secondAttribute="bottom" id="5EB-WA-WCG"/>
+                                    <constraint firstItem="Ngz-mD-mq7" firstAttribute="leading" secondItem="7pO-6u-mgi" secondAttribute="leading" id="CiV-JU-zT9"/>
+                                    <constraint firstAttribute="width" secondItem="7pO-6u-mgi" secondAttribute="height" multiplier="1:1" id="XQg-AM-PbF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ngz-mD-mq7" secondAttribute="trailing" id="fXq-od-fs8"/>
+                                    <constraint firstItem="Ngz-mD-mq7" firstAttribute="top" secondItem="7pO-6u-mgi" secondAttribute="top" id="ick-Jr-PWz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDl-gu-RJr">
+                                <rect key="frame" x="16" y="325.33333333333326" width="361" height="458.66666666666674"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tGL-7N-mLT">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="458.66666666666669"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tGL-7N-mLT" secondAttribute="bottom" id="26S-5r-nN0"/>
+                                    <constraint firstItem="tGL-7N-mLT" firstAttribute="leading" secondItem="XDl-gu-RJr" secondAttribute="leading" id="FYm-Rk-lDR"/>
+                                    <constraint firstItem="tGL-7N-mLT" firstAttribute="top" secondItem="XDl-gu-RJr" secondAttribute="top" id="Wv3-Qo-ecQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tGL-7N-mLT" secondAttribute="trailing" id="ysE-7t-qxD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XDl-gu-RJr" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="5GV-1R-BXU"/>
+                            <constraint firstAttribute="trailing" secondItem="5cO-n0-TW6" secondAttribute="trailing" id="Cer-n9-EEA"/>
+                            <constraint firstItem="7pO-6u-mgi" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="DLh-5z-4K5"/>
+                            <constraint firstItem="5cO-n0-TW6" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="EnH-j1-Qk3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XDl-gu-RJr" secondAttribute="bottom" id="P1a-ek-i8n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XDl-gu-RJr" secondAttribute="trailing" id="aEy-fz-Q6x"/>
+                            <constraint firstAttribute="bottom" secondItem="5cO-n0-TW6" secondAttribute="bottom" id="gHJ-B6-NdW"/>
+                            <constraint firstItem="5cO-n0-TW6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ljO-Oa-73x"/>
+                            <constraint firstItem="7pO-6u-mgi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="nTr-mA-B5b"/>
+                            <constraint firstItem="7pO-6u-mgi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="wfQ-R2-o6E"/>
+                            <constraint firstItem="XDl-gu-RJr" firstAttribute="top" secondItem="7pO-6u-mgi" secondAttribute="bottom" constant="30" id="zv5-t5-ncn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewPokemon" destination="Ngz-mD-mq7" id="Zl7-7Z-JVb"/>
+                        <outlet property="tableView" destination="tGL-7N-mLT" id="Iax-wK-6Qf"/>
+                        <outlet property="viewPokemon" destination="7pO-6u-mgi" id="SrU-KO-bML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BGDetail" width="1396" height="1444"/>
+        <image name="EmptyPok" width="512" height="512"/>
+    </resources>
+</document>
