@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeDetailTableViewCell" rowHeight="96" id="KGk-i7-Jjw" customClass="HomeDetailTableViewCell" customModule="Pokedex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XU-IL-qja">
+                        <rect key="frame" x="30" y="5" width="261" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-Wt-RYY">
+                                <rect key="frame" x="20.000000000000004" y="0.0" width="52.333333333333343" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-gk-Le9">
+                                <rect key="frame" x="82.333333333333329" y="0.0" width="48.999999999999986" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uNg-gk-Le9" firstAttribute="top" secondItem="9XU-IL-qja" secondAttribute="top" id="D9e-PN-TkN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uNg-gk-Le9" secondAttribute="trailing" id="G0P-Ge-6AN"/>
+                            <constraint firstItem="uNg-gk-Le9" firstAttribute="leading" secondItem="7Ip-Wt-RYY" secondAttribute="trailing" constant="10" id="MHF-lk-UJV"/>
+                            <constraint firstItem="7Ip-Wt-RYY" firstAttribute="leading" secondItem="9XU-IL-qja" secondAttribute="leading" constant="20" id="jBl-W9-QXZ"/>
+                            <constraint firstAttribute="bottom" secondItem="7Ip-Wt-RYY" secondAttribute="bottom" id="p43-cw-WXf"/>
+                            <constraint firstItem="7Ip-Wt-RYY" firstAttribute="top" secondItem="9XU-IL-qja" secondAttribute="top" id="vq9-Es-LgZ"/>
+                            <constraint firstAttribute="bottom" secondItem="uNg-gk-Le9" secondAttribute="bottom" id="zAX-mU-Uzf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="9XU-IL-qja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3Oe-Ee-E4f"/>
+                    <constraint firstItem="9XU-IL-qja" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="5vQ-S6-m7S"/>
+                    <constraint firstAttribute="trailing" secondItem="9XU-IL-qja" secondAttribute="trailing" constant="30" id="Pl7-fu-RCi"/>
+                    <constraint firstAttribute="bottom" secondItem="9XU-IL-qja" secondAttribute="bottom" constant="5" id="pz0-QX-IZ1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="HomeDetailTableViewCell"/>
+            <connections>
+                <outlet property="descript" destination="uNg-gk-Le9" id="LH8-Xn-INe"/>
+                <outlet property="title" destination="7Ip-Wt-RYY" id="6nT-dN-2TY"/>
+                <outlet property="viewBorder" destination="9XU-IL-qja" id="gdW-HO-BTv"/>
+            </connections>
+            <point key="canvasLocation" x="98.473282442748086" y="50.70422535211268"/>
+        </tableViewCell>
+    </objects>
+</document>
