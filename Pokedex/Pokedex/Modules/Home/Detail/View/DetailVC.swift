@@ -18,11 +18,16 @@ class DetailVC: UIViewController {
     var coordinator: DetailCoord!
     var viewModel: DetailVM!
     
+    
     // MARK: - IBOutlets
     @IBOutlet weak var viewPokemon: UIView!
+    @IBOutlet weak var btnFavs: UIButton!
     @IBOutlet weak var imageViewPokemon: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func AddFavs(_ sender: UIButton) {
+        self.viewModel.selectToFav()
+    }
     // MARK: - Funciones Inicio
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,10 +37,11 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.viewPokemon.layer.cornerRadius = self.viewPokemon.frame.size.width / 2
         self.viewPokemon.layer.borderWidth = 1
         self.viewPokemon.layer.borderColor = UIColor.black.cgColor
+        
+        self.btnFavs.layer.cornerRadius = self.btnFavs.frame.size.width / 2
         
         self.setNeedsStatusBarAppearanceUpdate()
         self.tableView.register(UINib(nibName: Celdas.homeDetailTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: Celdas.homeDetailTableViewCell.rawValue)
@@ -70,6 +76,15 @@ extension DetailVC: DetailProtocol {
     
     func refreshTableView() {
         self.tableView.reloadData()
+    }
+    
+    func refreshFav(exists: Bool) {
+        if exists{
+            self.btnFavs.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            self.btnFavs.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        
     }
 }
 

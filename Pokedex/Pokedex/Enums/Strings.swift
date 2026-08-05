@@ -10,6 +10,7 @@ import Foundation
 enum Controllers: String {
     case homeVC = "HomeVC"
     case detailVC = "DetailVC"
+    case favoritosVC = "FavoritosVC"
     case defaultVC = "DefaultVC"
 }
 

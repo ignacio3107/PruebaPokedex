@@ -15,6 +15,9 @@ class HomeVC: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func goToFavoritos(_ sender: UIButton) {
+        self.viewModel.goToFavotitos()
+    }
     
     // MARK: - Funciones Inicio
     override func viewDidLoad() {

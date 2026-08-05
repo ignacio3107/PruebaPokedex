@@ -56,4 +56,9 @@ extension HomeCoord: Coordinator {
         let vc = self.create(.detailVC, obj: params)
         self.mainController?.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func goToFavoritos(){
+        let vc = self.create(.favoritosVC)
+        self.mainController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }
