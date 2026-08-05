@@ -23,6 +23,9 @@ import UIKit
             if let params = obj as? PokemonSelect, let coord = DetailCoord(params: params) {
                 return coord.createModule()
             }
+        case .favoritosVC:
+            let coord = FavoritosCoord()
+            return coord.createModule()
         default:
             if let _ = obj {
                 return UIViewController()

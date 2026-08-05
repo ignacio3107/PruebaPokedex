@@ -51,6 +51,21 @@
                                     <constraint firstAttribute="trailing" secondItem="tGL-7N-mLT" secondAttribute="trailing" id="ysE-7t-qxD"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-Y0-pOZ">
+                                <rect key="frame" x="285" y="191.66666666666666" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="rPw-Te-9hs"/>
+                                    <constraint firstAttribute="height" constant="50" id="yIa-6Y-cbm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="AddFavs:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dgt-r7-r3l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,14 +76,17 @@
                             <constraint firstItem="5cO-n0-TW6" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="EnH-j1-Qk3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XDl-gu-RJr" secondAttribute="bottom" id="P1a-ek-i8n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XDl-gu-RJr" secondAttribute="trailing" id="aEy-fz-Q6x"/>
+                            <constraint firstItem="mfw-Y0-pOZ" firstAttribute="leading" secondItem="7pO-6u-mgi" secondAttribute="trailing" constant="10" id="dWw-pn-5Zr"/>
                             <constraint firstAttribute="bottom" secondItem="5cO-n0-TW6" secondAttribute="bottom" id="gHJ-B6-NdW"/>
                             <constraint firstItem="5cO-n0-TW6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ljO-Oa-73x"/>
                             <constraint firstItem="7pO-6u-mgi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="nTr-mA-B5b"/>
+                            <constraint firstItem="mfw-Y0-pOZ" firstAttribute="centerY" secondItem="7pO-6u-mgi" secondAttribute="centerY" id="sIM-2V-f0g"/>
                             <constraint firstItem="7pO-6u-mgi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="wfQ-R2-o6E"/>
                             <constraint firstItem="XDl-gu-RJr" firstAttribute="top" secondItem="7pO-6u-mgi" secondAttribute="bottom" constant="30" id="zv5-t5-ncn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnFavs" destination="mfw-Y0-pOZ" id="cdJ-AG-goP"/>
                         <outlet property="imageViewPokemon" destination="Ngz-mD-mq7" id="Zl7-7Z-JVb"/>
                         <outlet property="tableView" destination="tGL-7N-mLT" id="Iax-wK-6Qf"/>
                         <outlet property="viewPokemon" destination="7pO-6u-mgi" id="SrU-KO-bML"/>
@@ -82,5 +100,6 @@
     <resources>
         <image name="BGDetail" width="1396" height="1444"/>
         <image name="EmptyPok" width="512" height="512"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

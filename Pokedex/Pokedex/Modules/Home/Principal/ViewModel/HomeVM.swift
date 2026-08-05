@@ -88,6 +88,10 @@ class HomeVM {
             self.initInfo()
            }
     }
+    
+    func goToFavotitos(){
+        self.coordinator.goToFavoritos()
+    }
 }
 
 // MARK: - HomeMProtocol

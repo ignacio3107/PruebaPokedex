@@ -12,6 +12,7 @@ import UIKit
 protocol DetailProtocol: AnyObject {
     func refreshTableView()
     func refreshImage(link: String)
+    func refreshFav(exists: Bool)
 }
 
 // MARK: DetailVM class
@@ -21,6 +22,7 @@ class DetailVM {
     private unowned let vista: DetailVC
     private let model: DetailM
     private var params: PokemonSelect
+    var namesFavs: [String] = []
     
     // MARK: - Implementation
     weak var delegate: DetailProtocol?
@@ -35,12 +37,22 @@ class DetailVM {
         self.coordinator = coordinator
         self.model = DetailM(repository: PokemonRepositoryImpl(client: URLSessionHTTPClient()))
         self.model.delegate = self
+        
+        if let favs = UserDefaults.standard.stringArray(forKey: "Favoritos"){
+            self.namesFavs = favs
+            print(":::::::FAVORITOS ::::::")
+            print(favs)
+        }else {
+            print("No hay datos guardados...")
+        }
+        
     }
     
     // MARK: - ::: Funciones :::
     /// Función que obtiene la información necesaria para mostrar en tabla
     func initInfo() {
         self.coordinator.showLoading()
+        self.validateFav()
         self.model.getPokemonDetailService(params: self.params)
     }
     
@@ -76,6 +88,27 @@ class DetailVM {
     /// - Parameter indexPath: posición seleccionada
     func selectOption(tableView: UITableView, indexPath: IndexPath) {
         print("Celda sin acción...")
+    }
+    
+    func selectToFav(){
+        let resultado = namesFavs.filter { $0 == params.nameCapitalized }
+        if resultado.isEmpty {
+            self.namesFavs.append(params.nameCapitalized)
+            self.delegate?.refreshFav(exists: true)
+        }else {
+            self.namesFavs.removeAll { $0 == params.nameCapitalized }
+            self.delegate?.refreshFav(exists: false)
+        }
+        UserDefaults.standard.set(self.namesFavs, forKey: "Favoritos")
+    }
+    
+    func validateFav(){
+        let resultado = namesFavs.filter { $0 == params.nameCapitalized }
+        if !resultado.isEmpty {
+            self.delegate?.refreshFav(exists: true)
+        }else {
+            self.delegate?.refreshFav(exists: false)
+        }
     }
 }
 
